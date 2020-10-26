@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane fx:id="anchorTab2" maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="759.0" prefWidth="1100.0" style="visibility: true;" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane layoutX="99.0" layoutY="20.0" prefHeight="750.0" prefWidth="989.0" style="-fx-background-image: url \afbeeldingen\17454;">
+                    <children>
+                        <TableView fx:id="bookingDataTable" layoutX="438.0" layoutY="51.0" prefHeight="618.0" prefWidth="537.0">
+                     <columns>
+                                <TableColumn fx:id="dateC" prefWidth="84.0" style="-fx-alignment: center;" text="Date" />
+                         <TableColumn fx:id="timeC" prefWidth="65.14288330078125" style="-fx-alignment: center;" text="Time" />
+                         <TableColumn fx:id="nameC" prefWidth="239.99993896484375" style="-fx-alignment: center;" text="Name" />
+                         <TableColumn fx:id="visitorsC" prefWidth="55.4285888671875" style="-fx-alignment: center;" text="Visitors" />
+                         <TableColumn fx:id="tableC" prefWidth="90.85711669921875" style="-fx-alignment: center;" text="Assigned table" />
+
+                     </columns></TableView>
+                        <DatePicker fx:id="dp" layoutX="560.0" layoutY="15.0" promptText="Choose a bookingdate" />
+                        <Label layoutX="94.0" layoutY="-14.0" prefHeight="28.0" prefWidth="60.0" text="Tables" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="455.0" layoutY="-14.0" prefHeight="25.0" prefWidth="105.0" text="Bookings" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="addButton" layoutX="361.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#showAddButton" prefHeight="25.0" prefWidth="60.0" text="Add" />
+                        <Button layoutX="101.0" layoutY="685.0" mnemonicParsing="false" onMouseClicked="#deleteTable" prefHeight="25.0" prefWidth="105.0" text="Delete table" />
+                        <TableView fx:id="treeTable" layoutX="15.0" layoutY="52.0" prefHeight="618.0" prefWidth="342.0">
+                            <columns>
+                                <TableColumn fx:id="nrColumn" prefWidth="75.0" style="-fx-alignment: center;" text="Table Nr." />
+                                <TableColumn fx:id="maxColumn" prefWidth="87.42854309082031" style="-fx-alignment: center;" text="Max Seats" />
+                                <TableColumn fx:id="minColumn" prefWidth="102.857177734375" style="-fx-alignment: center;" text="Min Seats" />
+                                <TableColumn fx:id="avgColumn" prefWidth="75.99993896484375" style="-fx-alignment: center;" text="Avg Seats" />
+
+
+                            </columns>
+                        </TableView>
+                  <Button fx:id="selectBookingDate" layoutX="750.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#selectBookingDate" text="Select" />
+                  <Pane fx:id="addPane" blendMode="SRC_ATOP" cache="true" depthTest="DISABLE" layoutX="66.0" layoutY="111.0" prefHeight="329.0" prefWidth="550.0" style="-fx-background-color: #dfdede;" visible="false">
+                     <children>
+                              <TextField fx:id="nrTextField" layoutX="66.0" layoutY="47.0" prefHeight="25.0" prefWidth="68.0" promptText="Nr." />
+                              <TextField fx:id="minTextField" layoutX="145.0" layoutY="47.0" prefHeight="25.0" prefWidth="68.0" promptText="Min" />
+                              <TextField fx:id="maxTextField" layoutX="225.0" layoutY="47.0" prefHeight="25.0" prefWidth="68.0" promptText="Max" />
+                              <Button fx:id="addRoundTable" layoutX="325.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#addRoundTable" prefHeight="25.0" prefWidth="95.0" text=" Add Round">
+                                  <font>
+                                      <Font size="10.0" />
+                                  </font>
+                              </Button>
+                              <Button fx:id="addSquareTable" layoutX="437.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#addSquareTable" prefHeight="25.0" prefWidth="88.0" text="Add Square">
+                                  <font>
+                                      <Font size="10.0" />
+                                  </font>
+                              </Button>
+                        <Label layoutX="72.0" layoutY="14.0" prefHeight="28.0" prefWidth="238.0" text="ADD TABLE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="72.0" layoutY="111.0" prefHeight="28.0" prefWidth="238.0" text="ADD BOOKING">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="bookingDate" layoutX="66.0" layoutY="152.0" promptText="Choose Bookingdate " />
+                        <TextField fx:id="bookingTimeTextfield" layoutX="71.0" layoutY="202.0" promptText="Time (HH:MM)" />
+                        <TextField fx:id="bookingNameTextfield" layoutX="71.0" layoutY="241.0" promptText="Bookingname" />
+                        <TextField fx:id="bookingAmountTextfield" layoutX="71.0" layoutY="278.0" promptText="Amount of visitors" />
+                        <Button fx:id="closeAddPaneButton" layoutX="367.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#closeAddPane" prefHeight="28.0" prefWidth="80.0" text="Close" />
+                        <Button fx:id="addBookingButton" layoutX="358.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#addBooking" text="Add Booking " />
+                     </children>
+                  </Pane>
+                  <Button layoutX="594.0" layoutY="684.0" mnemonicParsing="false" onMouseClicked="#deleteTable" prefHeight="25.0" prefWidth="105.0" text="Delete booking" />
+                  <ImageView fx:id="magic" fitHeight="356.0" fitWidth="432.0" layoutX="186.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../magic.gif" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="resetButton" layoutX="914.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#doReset" prefHeight="25.0" prefWidth="68.0" text="Reset" />
+                  <Button fx:id="magicButton" layoutX="819.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#doMagic" prefHeight="25.0" prefWidth="80.0" text="DO MAGIC" />
+                    </children>
+                </Pane>
+                <Pane layoutX="14.0" layoutY="53.0" prefHeight="548.0" prefWidth="60.0" style="-fx-background-image: url \afbeeldingen\17454;">
+                    <children>
+                        <Button id="button1" fx:id="buttonOne" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#backButton" prefWidth="60.0" text="&lt;- Back" />
+                    </children>
+                </Pane>
+                <Label fx:id="titleLabel" layoutX="31.0" layoutY="14.0" prefHeight="39.0" prefWidth="185.0" text="Label" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font name="System Bold" size="27.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

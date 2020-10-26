@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Business/Business.iml" filepath="$PROJECT_DIR$/Business/Business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataLayer/DataLayer.iml" filepath="$PROJECT_DIR$/DataLayer/DataLayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuiLayer/GuiLayer.iml" filepath="$PROJECT_DIR$/GuiLayer/GuiLayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuiLayrr/GuiLayrr.iml" filepath="$PROJECT_DIR$/GuiLayrr/GuiLayrr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HorecaAPPFX.iml" filepath="$PROJECT_DIR$/HorecaAPPFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Main/Main.iml" filepath="$PROJECT_DIR$/Main/Main.iml" />
+    </modules>
+  </component>
+</project>
